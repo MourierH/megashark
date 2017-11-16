@@ -24,8 +24,7 @@ class MoviesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.movies',
-        'app.showtimes'
+        'app.movies'
     ];
 
     /**
