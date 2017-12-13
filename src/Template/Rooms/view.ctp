@@ -15,28 +15,26 @@
         <li><?= $this->Html->link(__('New Showtime'), ['controller' => 'Showtimes', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
+
 <div class="rooms view large-9 medium-8 columns content">
+<?= debug($showtimes->toArray()) ?> 
     <h3><?= h($room->name) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($room->name) ?></td>
+              <th scope="row"><?= __('Horaires') ?></th>
+            <th scope="row"><?= __('lundi') ?></th>
+            <th scope="row"><?= __('mardi') ?></th>
+            <th scope="row"><?= __('mercredi') ?></th>
+            <th scope="row"><?= __('jeudi') ?></th>
+            <th scope="row"><?= __('vendredi') ?></th>
+            <th scope="row"><?= __('samedi') ?></th>
+            <th scope="row"><?= __('dimanche') ?></th>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($room->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Capacity') ?></th>
-            <td><?= $this->Number->format($room->capacity) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Created') ?></th>
-            <td><?= h($room->created) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Modified') ?></th>
-            <td><?= h($room->modified) ?></td>
+       <td> 9h </td>
+       <td> 12h </td>
+         <td> 15h </td>
+          <td> 18h </td>
         </tr>
     </table>
     
