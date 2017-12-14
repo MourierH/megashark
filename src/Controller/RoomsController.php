@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+
+
 /**
  * Rooms Controller
  *
@@ -38,11 +40,12 @@ class RoomsController extends AppController
         $room = $this->Rooms->get($id, [
         ]);
         
+        
         $showtimes = $this->Rooms->Showtimes
             ->find()
             ->contain(['Movies'])
-            ->where(['room_id' => $id]);
-
+            ->where(['room_id' => $id])
+            ->where(['start >=' => new Time('monday this week')]); //pour voir le lund
         $this->set('room', $room);
         $this->set('showtimes', $showtimes);
         $this->set('_serialize', ['room']);
