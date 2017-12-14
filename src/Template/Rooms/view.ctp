@@ -31,7 +31,10 @@
             <th scope="row"><?= __('dimanche') ?></th>
         </tr>
         <tr>
-     
+      <td> 9h </td>
+-       <td> 12h </td>
+-         <td> 15h </td>
+-          <td> 18h </td>
         </tr>
     </table>
     
